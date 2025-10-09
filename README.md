@@ -25,7 +25,7 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 - [ x] An additional page shows all possible events
-  - x[ ] Users can sort *or* filter events by location.
+  - [x ] Users can sort *or* filter events by location.
 - [ x] Events display a countdown showing the time remaining before that event
   - [x ] Events appear with different formatting when the event has passed (ex. negative time, indication the event has passed, crossed out, etc.).
 
