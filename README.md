@@ -2,7 +2,7 @@
 
 Submitted by: **Rodrigo Mendoza**
 
-About this web app: **Unity Grid Plaza is a community event management platform that allows users to browse different venues and discover events happening at each location. Users can view event details, see real-time countdowns, and sort events by date.**
+About this web app: **Web103p week 3**
 
 Time spent: **8** hours
 
