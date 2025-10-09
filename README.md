@@ -2,7 +2,7 @@
 
 Submitted by: **Rodrigo Mendoza**
 
-About this web app: **Web103p week 3**
+About this web app: **Web103 week 3**
 
 Time spent: **8** hours
 
