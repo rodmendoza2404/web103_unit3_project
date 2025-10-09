@@ -1,55 +1,30 @@
-import React from 'react'
-import { useRoutes, Link } from 'react-router-dom'
-import Locations from './pages/Locations'
-import LocationEvents from './pages/LocationEvents'
-import Events from './pages/Events'
-import './App.css'
+import { Link } from 'react-router-dom'
 
-const App = () => {
-  let element = useRoutes([
-    {
-      path: '/',
-      element: <Locations />
-    },
-    {
-      path: '/echolounge',
-      element: <LocationEvents index={1} />
-    },
-    {
-      path: '/houseofblues',
-      element: <LocationEvents index={2} />
-    },
-    {
-      path: '/pavilion',
-      element: <LocationEvents index={3} />
-    },
-    {
-      path: '/americanairlines',
-      element: <LocationEvents index={4} />
-    },
-    {
-      path: '/events',
-      element: <Events />
-    }
-  ])
-
+export default function App() {
   return (
-    <div className='app'>
+    <main style={{ fontFamily: 'system-ui, Arial, sans-serif' }}>
+      {/* Hero */}
+      <section style={{
+        padding: '64px 16px',
+        background: 'linear-gradient(135deg, #0ea5e9 0%, #22c55e 100%)',
+        color: 'white', textAlign: 'center'
+      }}>
+        <h1 style={{ fontSize: 48, margin: 0 }}>Unity Grid Plaza</h1>
+        <p style={{ marginTop: 12, fontSize: 18 }}>Explore events by location—real or imaginary.</p>
+        <Link to="/locations" style={{
+          display:'inline-block', marginTop: 24, padding: '12px 18px',
+          background:'#111', color:'#fff', borderRadius: 10, textDecoration:'none'
+        }}>
+          Browse Locations →
+        </Link>
+      </section>
 
-      <header className='main-header'>
-        <h1>UnityGrid Plaza</h1>
-
-        <div className='header-buttons'>
-          <Link to='/' role='button'>Home</Link>
-          <Link to='/events' role='button'>Events</Link>
-        </div>
-      </header>
-
-      <main>
-        {element}
-      </main>
-    </div>
+      {/* Callout */}
+      <section style={{ maxWidth: 1100, margin: '32px auto', padding: '0 16px', textAlign:'center' }}>
+        <h2 style={{ marginBottom: 8 }}>Pick a spot to see what’s happening</h2>
+        <p style={{ color:'#555' }}>Each location has its own page and event list.</p>
+        <Link to="/locations" style={{ textDecoration:'none' }}>Open locations</Link>
+      </section>
+    </main>
   )
 }
-
-export default App

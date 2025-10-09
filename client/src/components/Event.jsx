@@ -1,62 +1,59 @@
-import React, { useState, useEffect } from 'react'
-import '../css/Event.css'
+import { Link } from 'react-router-dom'
 
-const Event = (props) => {
-
-    const [event, setEvent] = useState([])
-    const [time, setTime] = useState([])
-    const [remaining, setRemaining] = useState([])
-
-    useEffect(() => {
-        (async () => {
-            try {
-                const eventData = await EventsAPI.getEventsById(props.id)
-                setEvent(eventData)
-            }
-            catch (error) {
-                throw error
-            }
-        }) ()
-    }, [])
-
-    useEffect(() => {
-        (async () => {
-            try {
-                const result = await dates.formatTime(event.time)
-                setTime(result)
-            }
-            catch (error) {
-                throw error
-            }
-        }) ()
-    }, [event])
-
-    useEffect(() => {
-        (async () => {
-            try {
-                const timeRemaining = await dates.formatRemainingTime(event.remaining)
-                setRemaining(timeRemaining)
-                dates.formatNegativeTimeRemaining(remaining, event.id)
-            }
-            catch (error) {
-                throw error
-            }
-        }) ()
-    }, [event])
-
-    return (
-        <article className='event-information'>
-            <img src={event.image} />
-
-            <div className='event-information-overlay'>
-                <div className='text'>
-                    <h3>{event.title}</h3>
-                    <p><i className="fa-regular fa-calendar fa-bounce"></i> {event.date} <br /> {time}</p>
-                    <p id={`remaining-${event.id}`}>{remaining}</p>
-                </div>
-            </div>
-        </article>
-    )
+function formatCountdown(startsAt) {
+  const now = new Date()
+  const start = new Date(startsAt)
+  const diffMs = start - now
+  const past = diffMs < 0
+  const abs = Math.abs(diffMs)
+  const days = Math.floor(abs / (1000 * 60 * 60 * 24))
+  const hours = Math.floor((abs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+  const mins = Math.floor((abs % (1000 * 60 * 60)) / (1000 * 60))
+  return { past, label: `${past ? '-' : ''}${days}d ${hours}h ${mins}m` }
 }
 
-export default Event
+export default function Event({ event, showLocation = false, compact = false }) {
+  if (!event) return null
+
+  const { past, label } = formatCountdown(event.startsAt)
+  const padding = compact ? 10 : 12
+
+  return (
+    <li
+      style={{
+        border: '1px solid #eee',
+        borderRadius: 10,
+        padding,
+        background: past ? '#fafafa' : '#fff',
+        opacity: past ? 0.75 : 1,
+        listStyle: 'none'
+      }}
+    >
+      <h3 style={{ margin: 0 }}>
+        {event.title}{' '}
+        {past && <span style={{ color: '#ef4444' }}>(passed)</span>}
+      </h3>
+
+      {showLocation && event.locationName && event.slug && (
+        <p style={{ margin: '6px 0 0', color: '#666' }}>
+          At{' '}
+          <Link to={`/locations/${event.slug}`}>
+            {event.locationName}
+          </Link>
+        </p>
+      )}
+
+      {event.description && (
+        <p style={{ margin: '6px 0 0' }}>{event.description}</p>
+      )}
+
+      <p style={{ margin: '6px 0 0', color: '#555' }}>
+        Starts: {new Date(event.startsAt).toLocaleString()}
+      </p>
+
+      <p style={{ margin: '6px 0 0' }}>
+        Countdown: <strong>{label}</strong>
+      </p>
+    </li>
+  )
+}
