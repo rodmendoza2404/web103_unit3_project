@@ -37,11 +37,11 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src="https://imgur.com/gallery/web103project4-0PfKsUD" title="Video Walkthrough" width="600" alt="Video Walkthrough" />
+<img src="https://i.imgur.com/iTk3eBT.gif" title="Video Walkthrough" width="600" alt="Video Walkthrough" />
 
 
 https://imgur.com/gallery/web103project4-0PfKsUD
-
+https://i.imgur.com/iTk3eBT.gif
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  ScreenToGif
