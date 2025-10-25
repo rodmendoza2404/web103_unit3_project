@@ -37,7 +37,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src="https://imgur.com/a/0PfKsUD" title="Video Walkthrough" width="600" alt="Video Walkthrough" />
+<img src="https://i.imgur.com/iTk3eBT.gif" title="Video Walkthrough" width="600" alt="Video Walkthrough" />
 
 https://i.imgur.com/vPQk4yG.gif
 
