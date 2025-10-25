@@ -38,8 +38,7 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented required features:
 
 <img src="https://imgur.com/gallery/web103project4-0PfKsUD" title="Video Walkthrough" width="600" alt="Video Walkthrough" />
-
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/0PfKsUD"  ><a href="//imgur.com/a/0PfKsUD">web103project4</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+[![Video Walkthrough](https://i.imgur.com/iTk3eBT.jpg)](https://i.imgur.com/iTk3eBT.mp4)
 
 
 https://imgur.com/gallery/web103project4-0PfKsUD
