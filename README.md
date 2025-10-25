@@ -38,12 +38,10 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented required features:
 
 <img src="https://imgur.com/gallery/web103project4-0PfKsUD" title="Video Walkthrough" width="600" alt="Video Walkthrough" />
-[![Video Walkthrough](https://i.imgur.com/iTk3eBT.jpg)](https://i.imgur.com/iTk3eBT.mp4)
 
 
 https://imgur.com/gallery/web103project4-0PfKsUD
 
-[▶️ Watch the Video Walkthrough on Imgur](https://i.imgur.com/iTk3eBT.mp4)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  ScreenToGif
