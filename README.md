@@ -43,6 +43,8 @@ Here's a walkthrough of implemented required features:
 
 https://imgur.com/gallery/web103project4-0PfKsUD
 
+[▶️ Watch the Video Walkthrough on Imgur](https://i.imgur.com/iTk3eBT.mp4)
+
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  ScreenToGif
 <!-- Recommended tools:
