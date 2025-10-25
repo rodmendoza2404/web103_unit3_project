@@ -39,9 +39,7 @@ Here's a walkthrough of implemented required features:
 
 <img src="https://i.imgur.com/iTk3eBT.gif" title="Video Walkthrough" width="600" alt="Video Walkthrough" />
 
-## Video Walkthrough 🎥
-
-[![Video Walkthrough](https://i.imgur.com/iTk3eBT.gif)](https://i.imgur.com/iTk3eBT.mp4)
+<img src="https://i.imgur.com/iTk3eBT.gif" title="Video Walkthrough" width="600" alt="Video Walkthrough" />
 
 
 
